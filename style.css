@@ -1,0 +1,284 @@
+:root {
+    --bg: #f7f9fc;
+    --primary: #5b7cff;
+    --secondary: #8ea7ff;
+    --text: #2d2d2d;
+    --card: #ffffff;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 8%;
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 8%;
+    min-height: 100vh;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero span {
+    color: var(--primary);
+}
+
+.hero p {
+    margin: 20px 0;
+    color: #555;
+}
+
+.hero img {
+    width: 320px;
+    border-radius: 20px;
+}
+
+/* BUTTON (FIXED) */
+.btn {
+    display: inline-block;
+    width: fit-content;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--secondary);
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 8%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+/* GRID (2 PER ROW FIXED) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* FIX BUTTON ALIGNMENT */
+.card .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
+
+/* RESPONSIVE HERO */
+@media(max-width: 900px){
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        margin-top: 30px;
+        width: 250px;
+    }
+}
+
+/* RESPONSIVE GRID */
+@media(max-width: 768px){
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.socials {
+    align-items: center;
+    margin-top: 25px;
+}
+
+.socials a img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.socials a img:hover {
+    transform: scale(1.2);
+}
+
+#skills {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    color: #5a6ff0;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.skill-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-icon {
+    font-size: 2rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #1f1f1f;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+#certifications {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+#certifications h2 {
+    font-size: 2.5rem;
+    color: #5a6ff0;
+    margin-bottom: 50px;
+}
+
+/* CERT GRID */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* CERT CARD */
+.cert-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* TEXT */
+.cert-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.issuer {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.year {
+    color: #999;
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+.cert-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #5a6ff0;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.cert-btn:hover {
+    background: #3d52d5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
